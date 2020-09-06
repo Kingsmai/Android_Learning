@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/view_1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="#000000"></View>
+    <!--
+    layout_alignParentBottom="true" 以父元素为参照，对齐下方（布尔值）
+    layout_alignParentRight="true" 以父元素为参照，对齐右侧
+    -->
+    <!--再创建一个view，此时会发现他位置也是在屏幕的(0, 0)处-->
+    <View
+        android:id="@+id/view_2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="#ff0000"
+        android:layout_toRightOf="@id/view_1"></View>
+    <!--
+    layout_toRightOf 在谁的右边，属性值是参照物的id
+    layout_below 在谁的下边
+    -->
+    
+    <!--结合LinearLayout-->
+    <LinearLayout
+        android:id="@+id/ll_1"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@id/view_1"
+        android:background="#00ff00"
+        android:orientation="horizontal"
+        android:padding="15dp">
+
+        <View
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:background="#0000ff"></View>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#000000"
+            android:padding="15dp">
+            
+            <View
+                android:id="@+id/view_3"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:background="#ff9900"></View>
+
+            <View
+                android:id="@+id/view_4"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:background="#ff5500"
+                android:layout_toRightOf="@id/view_3"
+                android:layout_marginLeft="10dp"></View>
+            
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

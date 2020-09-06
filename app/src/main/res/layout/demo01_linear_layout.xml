@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    <!--
+    LinearLayout 线性布局
+    layout_width 宽度
+    layout_height 高度
+        match_parent 跟随父类（这里就是跟随屏幕宽高）
+    orientation 方向
+        vertical 垂直
+        horizontal 水平
+    -->
+
+    <LinearLayout
+        android:id="@+id/li_1"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:background="#000000"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingTop="50dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="10dp"
+        android:layout_marginBottom="20dp">
+        <!--
+        id 原件ID号（唯一）
+        dp单位：根据移动设备屏幕比例进行调整的比例值（相比px是固定的值）
+        background 背景，可以用16进制颜色作为参数
+        padding 内边距，paddingLeft 左内边距，paddingRight 右内边距，以此类推
+        layout_margin 外边距，layout_marginBottom 下外边距，layout_marginTop 上外边距，以此类推
+        -->
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ff0000"></View>
+        <!--
+        View 是所有组件的父类，所有组件都继承View类
+        -->
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/li_2"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="#0000ff"
+        android:orientation="horizontal"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:gravity="center">
+        <!--
+        gravity="center" 居中元素的内容
+        -->
+
+        <!--使两个元素左右各占一半：
+        1. 父类orientation设为horizontal（水平）
+        2. 子类宽度可以不设 -> width = 0dp（但是两个都要一样）
+        3. 子类使用weight（权重），值都为1
+        解释：计算父空间剩下多少空间，然后分配
+            （假设其中一个子元件有宽度，那么：
+            父原有空间：400dp，子A：宽度设定为50dp，子类B为0dp，两个子类权重都为1
+            400 - 50 = 350; 350 / 2 = 175dp
+            分配给两个子类的空间为175dp）
+        注意：在加载布局的时候自然是要通过对父布局的权重计算，来得出当前布局所占的比例，
+            从再计算出当前布局的实际大小，这一过程对性能会有些微的影响，
+            但是只要不是很复杂的界面，影响不明显。
+        -->
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="#000000"
+            android:layout_weight="1"></View>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="#ff0000"
+            android:layout_weight="1"></View>
+
+        <!--再多加一个子元素，权重为2，这时总权重为4，平分-->
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="#00ff00"
+            android:layout_weight="2"></View>
+
+    </LinearLayout>
+
+</LinearLayout>
