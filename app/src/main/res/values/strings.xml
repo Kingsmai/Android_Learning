@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Hello World</string>
+    <!--创建自己的字符串-->
+    <string name="tv_test1">小麦 Demo</string>
 </resources>

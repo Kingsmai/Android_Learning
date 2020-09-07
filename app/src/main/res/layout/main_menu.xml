@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/btn_textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Text View"/>
+    <!--text：设置控件需要显示的文本字符串-->
+    <!--然后到MainActivity.java文件，写逻辑代码-->
+
+</LinearLayout>

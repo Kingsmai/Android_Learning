@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <!--文字的大小颜色-->
+    <TextView
+        android:id="@+id/tv_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_test1"
+        android:textSize="24sp"
+        android:textColor="#00cc00"
+        android:background="#000000"/>
+    <!--
+    text：设置文本内容（可以是字符串、或@string/tv_test1[strings.xml定义的字符串]）
+        strings.xml相当于“全局变量”，一边修改
+    textSize：设置字体大小
+    textColor：设置字体颜色
+    -->
+
+    <!--显示不下使用...省略号-->
+    <TextView
+        android:id="@+id/tv_2"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="可以是字符串"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textSize="24sp"
+        android:textColor="#cc0000"/>
+    <!--
+    假设设置了宽度，那么当内容超过宽度的时候，会自动换行
+    如果不要自动换行，那么就加上：maxLines属性，控制显示的最大行数（超过最大行数的文本就不显示）
+    被省略的字段应该要有提示（...提示文本被删去了），用ellipsize="end"属性
+        ellipsize可用值有：
+            end -> 文末...
+            start -> ...文前
+            middle -> 文字...中间
+    -->
+
+    <!--文字 + icon-->
+    <TextView
+        android:id="@+id/tv_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="筛选"
+        android:drawableRight="@drawable/expand"
+        android:drawablePadding="10dp"
+        android:layout_marginTop="10dp"/>
+    <!--
+    目前将图片放在drawable文件夹下，后续开发项目因要适配不同分辨率，需要放进对应分辨率的mipmap文件夹下。
+    图片名称最好为小写，否则某些版本会出现错误
+    drawableRight 将图片放在右边（同理，有上下左右）
+    drawablePadding 图片与文字的边距（根据所选的位置进行调整，比如drawableRight则增加左边距）
+    -->
+
+    <!--中划线-->
+    <TextView
+        android:id="@+id/tv_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="这是中划线"/>
+    <!--中划线得用Java代码实现-->
+
+    <!--下划线-->
+    <TextView
+        android:id="@+id/tv_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="这是下划线"/>
+
+    <!--跑马灯-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="这是一条很长很长很长的文字，至于有多长呢，一个屏幕装不下下，你晓得有多长了吧？"
+        android:textColor="#000000"
+        android:singleLine="true"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:clickable="true"/>
+    <!--
+    singleLine 单行显示
+    ellipsize="marquee" 跑马灯
+    marqueeRepeatLimit="marquee_forever" 设置跑马灯次数，forever代表永远
+    focusable 可对焦（跑马灯只有在对焦状态(focus)中才会滚动）
+    focusableInTouchMode 触控模式可对焦
+    clickable 可点击
+    -->
+
+</LinearLayout>
