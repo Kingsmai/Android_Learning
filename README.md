@@ -13,7 +13,7 @@ JDK: `jdk-11.0.8`
 
 1. 在开始界面点击Open an existing Android Studio project
 
-![Welcome Screen](.\readme-img\as-welcome.png)
+![Welcome Screen](./readme-img/as-welcome.png)
 
 **如果您已经创建了一个项目：**
 
@@ -21,8 +21,8 @@ JDK: `jdk-11.0.8`
 
 2. 选择此项目文件夹，比如我的在：`C:\Users\xsbug\AndroidStudioProjects\Android_Learning`（取决于本项目在你电脑里的位置）
 
-![image-20200906160845728](.\readme-img\as-open-project.png)
+![Open Project](./readme-img/as-open-project.png)
 
 3. 出现这个界面，表示你的项目已经导入好了
 
-![image-20200906171901153](.\readme-img\as-project.png)
+![Workspace](./readme-img/as-project.png)
