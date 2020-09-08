@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp">
+
+    <!--TextView的属性也可以适用在Button上（文字大小、颜色）-->
+    <Button
+        android:id="@+id/btn_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="文字属性"
+        android:textSize="20sp"
+        android:textColor="#ffffff"
+        android:background="#ff9900"/>
+
+    <!--自定义背景形状-->
+    <!--
+    到drawable文件夹右键创建一个 new Drawable Resource File
+    File Name随便起，Root element 改为shape
+    这边用的Filename是bg_btn2, bg_btn3
+    -->
+    <Button
+        android:id="@+id/btn_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="自定义背景"
+        android:layout_below="@id/btn_1"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_btn2"/>
+    <Button
+        android:id="@+id/btn_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="边框背景"
+        android:layout_below="@id/btn_2"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_btn3"/>
+
+    <!--按压效果-->
+    <!--
+    到drawable文件夹右键创建一个 new Drawable Resource File
+    File Name随便起，Root element 改为selector
+    这边用的Filename是bg_btn4
+    -->
+    <Button
+        android:id="@+id/btn_4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="按压效果"
+        android:layout_below="@id/btn_3"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_btn4"/>
+
+    <!--点击事件-->
+    <Button
+        android:id="@+id/btn_5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="点我（点击事件）"
+        android:layout_below="@id/btn_4"
+        android:layout_marginTop="10dp"
+        android:onClick="showToast"/>
+    <!--onClick设置点击事件（这里调用ButtonActivity里的showToast方法）-->
+    <Button
+        android:id="@+id/btn_6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="点击事件（常用方法）"
+        android:layout_below="@id/btn_5"
+        android:layout_marginTop="10dp" />
+    <TextView
+        android:id="@+id/btn_tv_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="点我（Text View 点击事件）"
+        android:layout_below="@id/btn_6"
+        android:layout_marginTop="10dp"
+        android:textAlignment="center"/>
+    <!--
+    textAlignment="center" 设置文字居中
+    gravity="center" 也可以用来设置文字居中（且是上下左右居中）
+    -->
+
+</RelativeLayout>

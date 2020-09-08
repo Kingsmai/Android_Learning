@@ -9,8 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".TextViewActivity"></activity>
-        <activity android:name=".MainActivity">
+        <activity android:name=".Prac02LoginActivity"></activity>
+        <!-- activity 通常会自己自动声明 -->
+        <activity android:name=".Demo05EditTextActivity" />
+        <activity android:name=".Demo04ButtonActivity" />
+        <activity android:name=".Demo03TextViewActivity" />
+        <activity android:name=".MainMenuActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -7,11 +7,15 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button; // 输入 public Button之后会自动导包
 
-public class MainActivity extends AppCompatActivity {
+public class MainMenuActivity extends AppCompatActivity {
 
     // 声明用于页面跳转的Button控件
     // Button类是要导包的
     public Button mBtnTextView; // 声明一个Button类型的变量，名：mBtnTextView
+    public Button mBtnButton; // 同上，用于保存跳转Button页面的按钮
+    public Button mBtnEditText;
+
+    public Button mBtnLoginPrac;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,8 +39,38 @@ public class MainActivity extends AppCompatActivity {
             @Override // 覆盖重写View类的onclick事件
             public void onClick(View view) {
                 // 跳转到TextView演示界面
-                Intent intent = new Intent(MainActivity.this, TextViewActivity.class); // 暂时不理解
+                Intent intent = new Intent(MainMenuActivity.this, Demo03TextViewActivity.class); // 暂时不理解
                 startActivity(intent); // 运行上面声明的intent
+            }
+        });
+
+        // 找到对应Button控件
+        mBtnButton = findViewById(R.id.btn_button);
+        // 给该组件设置点击事件
+        mBtnButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // 跳转到Button演示界面
+                Intent intent = new Intent(MainMenuActivity.this, Demo04ButtonActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        mBtnEditText = findViewById(R.id.btn_editText);
+        mBtnEditText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainMenuActivity.this, Demo05EditTextActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        mBtnLoginPrac = findViewById(R.id.btn_prac02);
+        mBtnLoginPrac.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainMenuActivity.this, Prac02LoginActivity.class);
+                startActivity(intent);
             }
         });
     }

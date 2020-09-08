@@ -6,7 +6,7 @@ import android.graphics.Paint;
 import android.os.Bundle;
 import android.widget.TextView;
 
-public class TextViewActivity extends AppCompatActivity {
+public class Demo03TextViewActivity extends AppCompatActivity {
 
     private TextView mTv4, mTv5;
 //    private TextView mtv5;

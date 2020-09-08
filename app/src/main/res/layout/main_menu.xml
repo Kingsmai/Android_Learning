@@ -2,14 +2,54 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="学习 Learning"
+        android:textStyle="bold"/>
 
     <Button
         android:id="@+id/btn_textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Text View"/>
+        android:text="Demo 03 Text View"
+        android:textAllCaps="false"
+        android:textAlignment="textStart"/>
     <!--text：设置控件需要显示的文本字符串-->
+    <!--textAllCaps：设置是否全部大写（默认是true）-->
     <!--然后到MainActivity.java文件，写逻辑代码-->
+
+    <Button
+        android:id="@+id/btn_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Demo 04 Button"
+        android:textAllCaps="false"
+        android:textAlignment="textStart"/>
+
+    <Button
+        android:id="@+id/btn_editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Demo 05 EditText"
+        android:textAllCaps="false"
+        android:textAlignment="textStart"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="练习 Practise"
+        android:textStyle="bold"/>
+
+    <Button
+        android:id="@+id/btn_prac02"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Practise 2 登录界面"
+        android:textAllCaps="false"
+        android:textAlignment="textStart"/>
 
 </LinearLayout>

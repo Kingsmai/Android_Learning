@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <!--shape 定义他的形状（其他的谷歌一下这些有啥）-->
+
+    <!--常用属性-->
+    <!--背景颜色-->
+    <solid
+        android:color="#ffff00"/>
+
+    <!--圆角-->
+    <corners
+        android:radius="5dp"/>
+    <!--
+    radius半径（圆角弧度）；
+    其中还能设置某一角的弧度如：左下角 bottomLeftRadius
+    -->
+
+</shape>
