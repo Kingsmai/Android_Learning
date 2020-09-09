@@ -18,7 +18,7 @@
     <!--
     到drawable文件夹右键创建一个 new Drawable Resource File
     File Name随便起，Root element 改为shape
-    这边用的Filename是bg_btn2, bg_btn3
+    这边用的Filename是shape_yellow, shape_orange_border
     -->
     <Button
         android:id="@+id/btn_2"
@@ -27,7 +27,7 @@
         android:text="自定义背景"
         android:layout_below="@id/btn_1"
         android:layout_marginTop="10dp"
-        android:background="@drawable/bg_btn2"/>
+        android:background="@drawable/shape_yellow"/>
     <Button
         android:id="@+id/btn_3"
         android:layout_width="match_parent"
@@ -35,13 +35,13 @@
         android:text="边框背景"
         android:layout_below="@id/btn_2"
         android:layout_marginTop="10dp"
-        android:background="@drawable/bg_btn3"/>
+        android:background="@drawable/shape_orange_border"/>
 
     <!--按压效果-->
     <!--
     到drawable文件夹右键创建一个 new Drawable Resource File
     File Name随便起，Root element 改为selector
-    这边用的Filename是bg_btn4
+    这边用的Filename是selector_press_green
     -->
     <Button
         android:id="@+id/btn_4"
@@ -50,7 +50,7 @@
         android:text="按压效果"
         android:layout_below="@id/btn_3"
         android:layout_marginTop="10dp"
-        android:background="@drawable/bg_btn4"/>
+        android:background="@drawable/selector_press_green"/>
 
     <!--点击事件-->
     <Button

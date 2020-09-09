@@ -34,7 +34,23 @@
         android:id="@+id/btn_editText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Demo 05 EditText"
+        android:text="Demo 05 Edit Text"
+        android:textAllCaps="false"
+        android:textAlignment="textStart"/>
+
+    <Button
+        android:id="@+id/btn_radioButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Demo 06 Radio Button"
+        android:textAllCaps="false"
+        android:textAlignment="textStart"/>
+
+    <Button
+        android:id="@+id/btn_checkbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Demo 07 Check Box"
         android:textAllCaps="false"
         android:textAlignment="textStart"/>
 

@@ -9,8 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Prac02LoginActivity"></activity>
-        <!-- activity 通常会自己自动声明 -->
+        <activity android:name=".Demo07CheckBoxActivity"></activity>
+        <activity android:name=".Demo06RadioButtonActivity" />
+        <activity android:name=".Prac02LoginActivity" /> <!-- activity 通常会自己自动声明 -->
         <activity android:name=".Demo05EditTextActivity" />
         <activity android:name=".Demo04ButtonActivity" />
         <activity android:name=".Demo03TextViewActivity" />

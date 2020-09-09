@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="15dp">
+
+    <!--一组选项-->
+    <RadioGroup
+        android:id="@+id/rg_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!--和TextView一样，可以设置文本，字体大小，颜色……-->
+        <RadioButton
+            android:id="@+id/rb_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Male"
+            android:textSize="16sp"
+            android:textColor="#0000ff"
+            android:checked="true"
+            android:buttonTint="#0000ff"/>
+        <!--
+        checked 默认选中（布尔值），必须要给每个RadioButton设置一个id
+        buttonTint 更改button颜色
+        -->
+
+        <RadioButton
+            android:id="@+id/rb_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Female"
+            android:textSize="16sp"
+            android:textColor="#ff0000"
+            android:buttonTint="#ff0000"/>
+
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/rg_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp">
+
+        <!--自定义样式-->
+        <RadioButton
+            android:id="@+id/rb_3"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:text="男"
+            android:textSize="16sp"
+            android:textColor="@color/color_radio_purple"
+            android:background="@drawable/selector_radio_purple"
+            android:button="@null"
+            android:checked="true"/>
+        <!--
+        android:button="@null" 这样设置可以不显示我们通常所见的 RadioButton 中的圆形选中按钮
+        android:background="@drawable/selector_radio_purple" 这里设置了背景选择器
+        android:textColor="@color/color_radio_purple" 这里设置了字体颜色选择器，
+        需要在 res 目录下新建一个文件夹取名为 color ，
+        将字体颜色选择器 color_radio_purple.xml 文件存放在 res/color/ 目录下面
+        -->
+
+        <RadioButton
+            android:id="@+id/rb_4"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:text="女"
+            android:textSize="16sp"
+            android:textColor="@color/color_radio_purple"
+            android:background="@drawable/selector_radio_purple"
+            android:button="@null"
+            android:layout_marginStart="10dp"/>
+
+    </RadioGroup>
+
+
+</LinearLayout>

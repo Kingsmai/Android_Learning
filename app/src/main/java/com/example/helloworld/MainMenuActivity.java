@@ -6,6 +6,7 @@ import android.content.Intent; // 下面跳转的时候ide自动导入的（没�
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button; // 输入 public Button之后会自动导包
+import android.widget.Toast;
 
 public class MainMenuActivity extends AppCompatActivity {
 
@@ -14,6 +15,8 @@ public class MainMenuActivity extends AppCompatActivity {
     public Button mBtnTextView; // 声明一个Button类型的变量，名：mBtnTextView
     public Button mBtnButton; // 同上，用于保存跳转Button页面的按钮
     public Button mBtnEditText;
+    public Button mBtnRadioButton;
+    public Button mBtnCheckBox;
 
     public Button mBtnLoginPrac;
 
@@ -22,10 +25,6 @@ public class MainMenuActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         // 需要显示的页面，页面文件夹在app/src/res/layout
         setContentView(R.layout.main_menu); // 显示主界面 20200907
-//        setContentView(R.layout.demo01_linear_layout);
-//        setContentView(R.layout.demo02_relative_layout);
-//        setContentView(R.layout.demo03_text_view);
-//        setContentView(R.layout.prac01_layout);
 
         /*
         找到Button控件
@@ -34,44 +33,65 @@ public class MainMenuActivity extends AppCompatActivity {
         解决方法：mBtnTextView = (Button) findViewById(R.id.btn_textView); // 就是Java的强转
          */
         mBtnTextView = findViewById(R.id.btn_textView); // R.id 会保存所有被声明的id
-        // 给该组件设置点击事件
-        mBtnTextView.setOnClickListener(new View.OnClickListener() {
-            @Override // 覆盖重写View类的onclick事件
-            public void onClick(View view) {
-                // 跳转到TextView演示界面
-                Intent intent = new Intent(MainMenuActivity.this, Demo03TextViewActivity.class); // 暂时不理解
-                startActivity(intent); // 运行上面声明的intent
-            }
-        });
-
-        // 找到对应Button控件
         mBtnButton = findViewById(R.id.btn_button);
-        // 给该组件设置点击事件
-        mBtnButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                // 跳转到Button演示界面
-                Intent intent = new Intent(MainMenuActivity.this, Demo04ButtonActivity.class);
-                startActivity(intent);
-            }
-        });
-
         mBtnEditText = findViewById(R.id.btn_editText);
-        mBtnEditText.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainMenuActivity.this, Demo05EditTextActivity.class);
-                startActivity(intent);
-            }
-        });
+        mBtnRadioButton = findViewById(R.id.btn_radioButton);
+        mBtnCheckBox = findViewById(R.id.btn_checkbox);
 
         mBtnLoginPrac = findViewById(R.id.btn_prac02);
-        mBtnLoginPrac.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainMenuActivity.this, Prac02LoginActivity.class);
-                startActivity(intent);
+        setListeners();
+    }
+
+    // 设置监听器（初始化）
+    private void setListeners() {
+        OnClick onClick = new OnClick();
+        // 给每个控件设置点击事件
+        mBtnTextView.setOnClickListener(onClick);
+        mBtnButton.setOnClickListener(onClick);
+        mBtnEditText.setOnClickListener(onClick);
+        mBtnRadioButton.setOnClickListener(onClick);
+        mBtnCheckBox.setOnClickListener(onClick);
+        mBtnLoginPrac.setOnClickListener(onClick);
+    }
+
+    // 简化跳转页面按钮代码：
+    private class OnClick implements View.OnClickListener {
+
+        // 覆盖重写onClick函数
+        @Override
+        public void onClick(View view) {
+            Intent intent = null;
+            // 获取按钮ID，并对相应的按钮进行不同页面的跳转
+            switch(view.getId()) {
+                case R.id.btn_textView:
+                    // 跳转到 TextView演示界面
+                    intent = new Intent(MainMenuActivity.this, Demo03TextViewActivity.class);
+                    break;
+                case R.id.btn_button:
+                    // 跳转到 Button演示界面
+                    intent = new Intent(MainMenuActivity.this, Demo04ButtonActivity.class);
+                    break;
+                case R.id.btn_editText:
+                    // 跳转到 Edit Text 界面
+                    intent = new Intent(MainMenuActivity.this, Demo05EditTextActivity.class);
+                    break;
+                case R.id.btn_radioButton:
+                    // 跳转到 Radio Button 界面
+                    intent = new Intent(MainMenuActivity.this, Demo06RadioButtonActivity.class);
+                    break;
+                case R.id.btn_checkbox:
+                    intent = new Intent(MainMenuActivity.this, Demo07CheckBoxActivity.class);
+                    break;
+                case R.id.btn_prac02:
+                    // 跳转到 Practise02 Login 界面
+                    intent = new Intent(MainMenuActivity.this, Prac02LoginActivity.class);
+                    break;
+                default:
+                    // 默认报错
+                    Toast.makeText(MainMenuActivity.this, "这颗按钮貌似出BUG了", Toast.LENGTH_SHORT);
+                    break;
             }
-        });
+            startActivity(intent); // 运行上面声明的intent
+        }
     }
 }

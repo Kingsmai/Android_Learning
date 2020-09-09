@@ -47,7 +47,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="筛选"
-        android:drawableRight="@drawable/expand"
+        android:drawableRight="@drawable/icon_expand"
         android:drawablePadding="10dp"
         android:layout_marginTop="10dp"/>
     <!--

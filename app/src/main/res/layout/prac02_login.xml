@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Username"
-        android:drawableStart="@drawable/user"
+        android:drawableStart="@drawable/icon_user"
         android:drawablePadding="10dp"
         android:background="@drawable/bg_input"
         android:padding="8dp"/>
@@ -20,7 +20,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Password"
-        android:drawableStart="@drawable/pass"
+        android:drawableStart="@drawable/icon_pass"
         android:drawablePadding="10dp"
         android:background="@drawable/bg_input"
         android:padding="8dp"
