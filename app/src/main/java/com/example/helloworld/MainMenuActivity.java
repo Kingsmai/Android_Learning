@@ -8,15 +8,21 @@ import android.view.View;
 import android.widget.Button; // 输入 public Button之后会自动导包
 import android.widget.Toast;
 
+import com.example.helloworld.demo09listview.Demo09ListViewActivity;
+import com.example.helloworld.demo10gridview.Demo10GridViewActivity;
+
 public class MainMenuActivity extends AppCompatActivity {
 
     // 声明用于页面跳转的Button控件
     // Button类是要导包的
-    public Button mBtnTextView; // 声明一个Button类型的变量，名：mBtnTextView
-    public Button mBtnButton; // 同上，用于保存跳转Button页面的按钮
-    public Button mBtnEditText;
-    public Button mBtnRadioButton;
-    public Button mBtnCheckBox;
+    private Button mBtnTextView; // 声明一个Button类型的变量，名：mBtnTextView
+    private Button mBtnButton; // 同上，用于保存跳转Button页面的按钮
+    private Button mBtnEditText;
+    private Button mBtnRadioButton;
+    private Button mBtnCheckBox;
+    private Button mBtnImageView;
+    private Button mBtnListView;
+    private Button mBtnGridView;
 
     public Button mBtnLoginPrac;
 
@@ -30,6 +36,7 @@ public class MainMenuActivity extends AppCompatActivity {
         找到Button控件
         如果报错的话（旧版本Android Studio不会隐含强转）
         深入解释：旧版本findViewById返回的是View类，所以需要转换成为Button类。
+        纠正：搜了一下，新版本的Android Studio使用了泛型，所以不需要类型转换
         解决方法：mBtnTextView = (Button) findViewById(R.id.btn_textView); // 就是Java的强转
          */
         mBtnTextView = findViewById(R.id.btn_textView); // R.id 会保存所有被声明的id
@@ -37,6 +44,9 @@ public class MainMenuActivity extends AppCompatActivity {
         mBtnEditText = findViewById(R.id.btn_editText);
         mBtnRadioButton = findViewById(R.id.btn_radioButton);
         mBtnCheckBox = findViewById(R.id.btn_checkbox);
+        mBtnImageView = findViewById(R.id.btn_imageView);
+        mBtnListView = findViewById(R.id.btn_listView);
+        mBtnGridView = findViewById(R.id.btn_gridView);
 
         mBtnLoginPrac = findViewById(R.id.btn_prac02);
         setListeners();
@@ -52,6 +62,9 @@ public class MainMenuActivity extends AppCompatActivity {
         mBtnRadioButton.setOnClickListener(onClick);
         mBtnCheckBox.setOnClickListener(onClick);
         mBtnLoginPrac.setOnClickListener(onClick);
+        mBtnImageView.setOnClickListener(onClick);
+        mBtnListView.setOnClickListener(onClick);
+        mBtnGridView.setOnClickListener(onClick);
     }
 
     // 简化跳转页面按钮代码：
@@ -81,6 +94,15 @@ public class MainMenuActivity extends AppCompatActivity {
                     break;
                 case R.id.btn_checkbox:
                     intent = new Intent(MainMenuActivity.this, Demo07CheckBoxActivity.class);
+                    break;
+                case R.id.btn_imageView:
+                    intent = new Intent(MainMenuActivity.this, Demo08ImageViewActivity.class);
+                    break;
+                case R.id.btn_listView:
+                    intent = new Intent(MainMenuActivity.this, Demo09ListViewActivity.class);
+                    break;
+                case R.id.btn_gridView:
+                    intent = new Intent(MainMenuActivity.this, Demo10GridViewActivity.class);
                     break;
                 case R.id.btn_prac02:
                     // 跳转到 Practise02 Login 界面

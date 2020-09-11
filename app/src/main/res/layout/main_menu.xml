@@ -54,6 +54,30 @@
         android:textAllCaps="false"
         android:textAlignment="textStart"/>
 
+    <Button
+        android:id="@+id/btn_imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Demo 08 Image View"
+        android:textAllCaps="false"
+        android:textAlignment="textStart"/>
+
+    <Button
+        android:id="@+id/btn_listView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Demo 09 List View"
+        android:textAllCaps="false"
+        android:textAlignment="textStart"/>
+
+    <Button
+        android:id="@+id/btn_gridView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Demo 10 Grid View"
+        android:textAllCaps="false"
+        android:textAlignment="textStart"/>
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

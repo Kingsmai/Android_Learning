@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.helloworld">
 
+    <!--声明网络权限，修改Manifest（且在真机运行的）需要先卸载你的手机上卸载这个app，然后重新调试-->
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,12 +12,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Demo07CheckBoxActivity"></activity>
+        <activity android:name=".demo10gridview.Demo10GridViewActivity"/>
+        <activity android:name=".demo09listview.Demo09ListViewActivity"/>
+        <activity android:name=".Demo08ImageViewActivity"/>
+        <activity android:name=".Demo07CheckBoxActivity" />
         <activity android:name=".Demo06RadioButtonActivity" />
-        <activity android:name=".Prac02LoginActivity" /> <!-- activity 通常会自己自动声明 -->
         <activity android:name=".Demo05EditTextActivity" />
         <activity android:name=".Demo04ButtonActivity" />
         <activity android:name=".Demo03TextViewActivity" />
+        <activity android:name=".Prac02LoginActivity" /> <!-- activity 通常会自己自动声明 -->
         <activity android:name=".MainMenuActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
