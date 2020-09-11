@@ -1,95 +1,191 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp">
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!--20200911改为Scroll View-->
+    <!--ScrollView（垂直滚动）的子元素只能有一个-->
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="学习 Learning"
-        android:textStyle="bold"/>
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
 
-    <Button
-        android:id="@+id/btn_textView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Demo 03 Text View"
-        android:textAllCaps="false"
-        android:textAlignment="textStart"/>
-    <!--text：设置控件需要显示的文本字符串-->
-    <!--textAllCaps：设置是否全部大写（默认是true）-->
-    <!--然后到MainActivity.java文件，写逻辑代码-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="学习 Learning"
+            android:textStyle="bold" />
 
-    <Button
-        android:id="@+id/btn_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Demo 04 Button"
-        android:textAllCaps="false"
-        android:textAlignment="textStart"/>
+        <Button
+            android:id="@+id/btn_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Demo 03 Text View"
+            android:textAlignment="textStart"
+            android:textAllCaps="false" />
+        <!--然后到MainActivity.java文件，写逻辑代码-->
+        <!--text：设置控件需要显示的文本字符串-->
+        <!--textAllCaps：设置是否全部大写（默认是true）-->
+        <!--clickable="false"设置按钮不能被点击-->
+        <!--enabled="false"设置按钮不可被点击-->
 
-    <Button
-        android:id="@+id/btn_editText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Demo 05 Edit Text"
-        android:textAllCaps="false"
-        android:textAlignment="textStart"/>
+        <Button
+            android:id="@+id/btn_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Demo 04 Button"
+            android:textAlignment="textStart"
+            android:textAllCaps="false" />
 
-    <Button
-        android:id="@+id/btn_radioButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Demo 06 Radio Button"
-        android:textAllCaps="false"
-        android:textAlignment="textStart"/>
+        <Button
+            android:id="@+id/btn_editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Demo 05 Edit Text"
+            android:textAlignment="textStart"
+            android:textAllCaps="false" />
 
-    <Button
-        android:id="@+id/btn_checkbox"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Demo 07 Check Box"
-        android:textAllCaps="false"
-        android:textAlignment="textStart"/>
+        <Button
+            android:id="@+id/btn_radioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Demo 06 Radio Button"
+            android:textAlignment="textStart"
+            android:textAllCaps="false" />
 
-    <Button
-        android:id="@+id/btn_imageView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Demo 08 Image View"
-        android:textAllCaps="false"
-        android:textAlignment="textStart"/>
+        <Button
+            android:id="@+id/btn_checkbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Demo 07 Check Box"
+            android:textAlignment="textStart"
+            android:textAllCaps="false" />
 
-    <Button
-        android:id="@+id/btn_listView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Demo 09 List View"
-        android:textAllCaps="false"
-        android:textAlignment="textStart"/>
+        <Button
+            android:id="@+id/btn_imageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Demo 08 Image View"
+            android:textAlignment="textStart"
+            android:textAllCaps="false" />
 
-    <Button
-        android:id="@+id/btn_gridView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Demo 10 Grid View"
-        android:textAllCaps="false"
-        android:textAlignment="textStart"/>
+        <Button
+            android:id="@+id/btn_listView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Demo 09 List View"
+            android:textAlignment="textStart"
+            android:textAllCaps="false" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="练习 Practise"
-        android:textStyle="bold"/>
+        <Button
+            android:id="@+id/btn_gridView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Demo 10 Grid View"
+            android:textAlignment="textStart"
+            android:textAllCaps="false" />
 
-    <Button
-        android:id="@+id/btn_prac02"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Practise 2 登录界面"
-        android:textAllCaps="false"
-        android:textAlignment="textStart"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:text="Demo 11 Scroll View 这个页面就是了"
+            android:textAlignment="textStart"
+            android:textAllCaps="false" />
 
-</LinearLayout>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:text="Demo 12 Horizontal Scroll View 在下面"
+            android:textAlignment="textStart"
+            android:textAllCaps="false" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:text="Demo 13"
+            android:textAlignment="textStart"
+            android:textAllCaps="false" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:text="Demo 14"
+            android:textAlignment="textStart"
+            android:textAllCaps="false" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:text="Demo 15"
+            android:textAlignment="textStart"
+            android:textAllCaps="false" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:text="Demo 16"
+            android:textAlignment="textStart"
+            android:textAllCaps="false" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="练习 Practise"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn_prac02"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Practise 2 登录界面"
+            android:textAlignment="textStart"
+            android:textAllCaps="false" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="HorizontalScrollView 示例"
+            android:textStyle="bold" />
+
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <!--HorizontalScrollView（水平滚动）的子元素也只能有一个-->
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="演示用（无效果）"
+                    android:enabled="false"/>
+
+                <Button
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="演示用（无效果）"
+                    android:enabled="false"/>
+
+                <Button
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="演示用（无效果）"
+                    android:enabled="false"/>
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+    </LinearLayout>
+
+</ScrollView>
