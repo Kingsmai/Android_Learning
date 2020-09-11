@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ListView
+        android:id="@+id/lv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:divider="@color/colorAccent"
+        android:dividerHeight="1dp"
+        android:listSelector="@drawable/selector_list_orange" />
+    <!--
+    listSelector 设置按压效果
+    divider 设置列表项之间的分割线样式
+    dividerHeight 设置分割线的高度
+    -->
+
+</LinearLayout>
